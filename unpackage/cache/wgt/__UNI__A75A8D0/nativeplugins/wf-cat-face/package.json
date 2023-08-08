@@ -1,0 +1,33 @@
+{
+	"name": "实时检测猫",
+	"id": "wf-cat-face",
+	"version": "1.0",
+	"description": "实时检测猫的脸部，目前仅支持正脸，检测返回实时的图片，图片以base64字符串的形式返回",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"android": {
+			"plugins": [{
+				"type": "module",
+				"name": "catFace",
+				"class": "com.opencv.OpenFace"
+			}],
+			"integrateType": "aar",
+			"compileOptions": { 
+				"sourceCompatibility": "1.8",
+				"targetCompatibility": "1.8"
+			},
+			"abis": [
+				"arm64-v8a",
+				"armeabi-v7a"
+			],
+			"minSdkVersion": "21",
+			"useAndroidX": true, 
+			"permissions": [
+				"android.permission.CAMERA",
+				"android.permission.ACCESS_NETWORK_STATE",
+				"android.permission.INTERNET"
+			],
+			"parameters": {}
+		}
+	}
+}
